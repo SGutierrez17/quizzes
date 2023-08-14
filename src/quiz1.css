@@ -1,0 +1,136 @@
+/* Global */
+
+/*=======================================
+    #Variables
+=========================================*/
+
+/*
+  TABLE OF CONTENTS
+
+  COLORS
+  Brand colors............................These are the main brand colors.
+  Neutral colors..........................White and black, gray sacale, secondary colors.
+  Utility colors..........................Other colors to represent states: info, warning, sucess, etc.
+
+  TYPOGRAPHY
+  Font famillies..........................The fonts used in the design system.
+  Font weights............................Font weights
+  Sizes...................................Font sizing for body text, paragraphs, inputs
+  Heading sizes...........................Font sizing for page headings
+
+  BREAKPOINTS
+  Breakpoints.............................Global responsive breakpoints definitions
+*/
+:root {
+    /*=======================================
+      COLORS
+  =========================================*/
+  
+    /*=============================
+    BRAND COLORS
+  ===============================*/
+  
+    --start-gradient: #FF5733;
+    --end-gradient: #FFC300;
+    --even-row: #F5F5F5;
+    --odd-row: #FFFFFF;
+    --progress-bar: #4CAF50;
+    --first-row: #B0E0E6;
+  
+    /*==============================
+    NEUTRAL COLORS
+  ================================*/
+  
+    --primary-bg: #0a0c11;
+    --primary-text: #9c9ea3;
+    --sub-menu-color: #222;
+    --paragraph-color: #336699;
+    --border-left-color: #FF4500;
+    --bullet-color:#228B22;
+    
+  
+    /*=======================================
+    TYPOGRAPHY
+  =========================================*/
+  
+    /*
+      1. The Poppins font. This is the main font.
+      https://fonts.googleapis.com/css?family=Poppins
+  
+      2. The Courier font. This is used for <pre> code.
+      https://fonts.googleapis.com/css?family=Poppins
+  */
+  
+    /*=========================
+    Font weights
+  ==========================*/
+  
+    --thin: 100;
+    --extra-light: 200;
+    --light: 300;
+    --normal: 400;
+    --medium: 500;
+    --semi-bold: 600;
+    --bold: 700;
+    --extra-bold: 800;
+    --heavy: 900;
+  
+    /*=========================
+      Font famillies
+  ==========================*/
+  
+    --primary-font: "Poppins";
+    --secondary-font: "Courier";
+  
+    /*=========================
+    Sizes
+  ==========================*/
+    --base-font: 16px;
+  }
+  
+  /*=======================================
+      RESETS
+  =========================================*/
+
+body {
+  box-sizing: border-box;
+  font-family: var(--primary-font);
+  font-size: var(--base-font);
+  color: var(--primary-text);
+  background-color: var(--primary-bg);
+  margin: 30px;
+  padding: 0px;
+  height: 100vh;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+header{
+    display: flex;
+    align-items: center;
+}
+
+.logo{
+    width: 30%;
+}
+
+nav{
+  display: flex;
+  justify-content: space-around;
+  width: 70%;
+}
+
+.information ul li{
+  flex-direction: row;
+}
+
+.submenu{
+  display: none;
+
+  
+}
+
