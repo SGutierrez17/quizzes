@@ -1,0 +1,464 @@
+/* Global */
+
+/*=======================================
+    #Variables
+=========================================*/
+
+/*
+  TABLE OF CONTENTS
+
+  COLORS
+  Brand colors............................These are the main brand colors.
+  Neutral colors..........................White and black, gray sacale, secondary colors.
+  Utility colors..........................Other colors to represent states: info, warning, sucess, etc.
+
+  TYPOGRAPHY
+  Font famillies..........................The fonts used in the design system.
+  Font weights............................Font weights
+  Sizes...................................Font sizing for body text, paragraphs, inputs
+  Heading sizes...........................Font sizing for page headings
+
+  BREAKPOINTS
+  Breakpoints.............................Global responsive breakpoints definitions
+*/
+:root {
+    /*=======================================
+      COLORS
+  =========================================*/
+  
+    /*=============================
+    BRAND COLORS
+  ===============================*/
+  
+    --start-gradient: #FF5733;
+    --end-gradient: #FFC300;
+    --even-row: #F5F5F5;
+    --odd-row: #FFFFFF;
+    --progress-bar: #4CAF50;
+    --first-row: #B0E0E6;
+    --hover-color: #be667e;
+  
+    /*==============================
+    NEUTRAL COLORS
+  ================================*/
+  
+    --primary-bg: #141414;
+    --primary-text: #9c9ea3;
+    --sub-menu-color: #222;
+    --paragraph-color: #336699;
+    --border-left-color: #FF4500;
+    --bullet-color:#228B22;
+    
+  
+    /*=======================================
+    TYPOGRAPHY
+  =========================================*/
+  
+    /*
+      1. The Poppins font. This is the main font.
+      https://fonts.googleapis.com/css?family=Poppins
+  
+      2. The Courier font. This is used for <pre> code.
+      https://fonts.googleapis.com/css?family=Poppins
+  */
+  
+    /*=========================
+    Font weights
+  ==========================*/
+  
+    --thin: 100;
+    --extra-light: 200;
+    --light: 300;
+    --normal: 400;
+    --medium: 500;
+    --semi-bold: 600;
+    --bold: 700;
+    --extra-bold: 800;
+    --heavy: 900;
+  
+    /*=========================
+      Font famillies
+  ==========================*/
+  
+    --primary-font: "Poppins";
+    --secondary-font: "Courier";
+  
+    /*=========================
+    Sizes
+  ==========================*/
+    --base-font: 16px;
+  }
+  
+  /*=======================================
+      RESETS
+  =========================================*/
+
+body {
+  box-sizing: border-box;
+  font-family: var(--primary-font);
+  font-size: var(--base-font);
+  color: var(--primary-text);
+  background-color: var(--primary-bg);
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+/*=========================
+  Heading Sizes
+==========================*/
+
+h1{
+  font-size: 1.9em;
+  text-decoration: underline;
+}
+
+p{
+  font-size: var(--base-font);
+  line-height: 1.5em;
+  color: var(--paragraph-color);
+}
+
+a {
+  font-weight: var(--semi-bold);
+  text-decoration: none;
+  color: var(--primary-text);
+  font-size: 1.7em;
+  font-style: normal;
+  line-height: 2.4em;
+  text-transform: capitalize;
+}
+
+a:hover {
+  color: var(--hover-color);
+  cursor: pointer;
+}
+
+.selected {
+  color: var(--hover-color);
+}
+
+
+.hero{
+  padding: 30px 70px;
+}
+
+/* .overlay {
+  z-index: 1;
+  position: absolute;
+  left: 0;
+  top: 0;
+  margin: 0;
+  padding: 30px 70px;
+  background-color: rgba(0,0,0,0.7);
+  width: 100%;
+  height: 100vh;
+  opacity: 0.4;
+} */
+
+header{
+    display: flex;
+    align-items: center;
+}
+
+nav{
+  display: flex;
+  justify-content: right;
+}
+
+.logo{
+    width: 30%;
+}
+
+.information{
+  width: 70%;
+  padding-right: 20px;
+}
+
+.arrow {
+  margin-left: 125px;
+  margin-top: -46px;
+}
+
+.information > ul {
+  list-style-type: none;
+  display: flex;
+  gap: 50px;
+}
+
+.submenu {
+  display: none;
+}
+
+.information ul li {
+  position: relative;
+}
+
+.information ul li:nth-child(3):hover .submenu {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+}
+
+.submenu {
+  list-style-type: armenian;
+  width: 250px;
+  background-color: var(--sub-menu-color);
+  z-index: 99;
+}
+
+.submenu li {
+  min-width: 100%;
+  padding-left: 20px;
+  
+}
+
+.submenu li:hover {
+  padding-left: 20%;
+}
+
+main{
+  display: flex;
+  align-items: center;
+  text-align: center;
+
+}
+
+.main-left{
+  margin-top: 30px;
+  width: 30%;
+  display: flex;
+}
+
+blockquote {
+  border-left: 10px solid #FF4500;
+  padding: 15px;
+  background-color: #F9F9F9;
+}
+
+.main-right{
+  width: 70%;
+  align-items: center;
+}
+
+.cta {
+  margin-top: 50px;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.button-gradient {
+  border-radius: 50px;
+  background: linear-gradient(90deg,
+      var(--start-gradient) 0%,
+      var(--end-gradient) 100%);
+
+  font-size: 1.5em;
+  font-weight: var(--bold);
+  text-transform: capitalize;
+  color: #FFFFFF;
+  padding: 20px 35px;
+  
+}
+
+.button-gradient:hover {
+  background: #8c6d6d;
+  text-shadow: 4px 4px 10px #000000;
+}
+
+.viñetas ul li{
+  list-style-type: square;
+  color: var(--bullet-color);
+  font-size: 1.3em;
+  text-align: start;
+}
+
+.viñetas ul li span{
+  color: var(--primary-text);
+}
+
+.table-top {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+  color: #fff;
+}
+
+.box {
+  background-color: var(--bullet-color);
+  padding: 30px;
+}
+
+.menu {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted var(--sub-menu-color);
+}
+
+.menu .context-menu {
+  visibility: hidden;
+  width: 200px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  
+
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+}
+
+.menu:hover .context-menu {
+  visibility: visible;
+}
+
+#name {
+  font-size: 1.2em;
+  padding: 15px;
+  background-color: var(--sub-menu-color);
+  border-radius: 4px;
+  color: #ffffff;
+  border: 1px solid var(--border-color);
+  min-width: 500px;
+  cursor: pointer;
+  margin-top: 30px;
+}
+
+.circulo{
+  padding: 150px 50%;
+  
+}
+
+.circle{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: lightblue;
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+.circle:hover{
+  transform: scale(2.5);
+    transition: all 3s ease-in-out;
+}
+
+.progress {
+  margin: 10px 150px;
+  font-size: 1.5em;
+  font-weight: var(--bold);
+  text-transform: capitalize;
+  background-color: #fff;
+  color: #fff;
+}
+
+.progress-bar {
+  background: var(--progress-bar);
+}
+
+hr{
+  position: relative;
+  height: 10px;
+  background: linear-gradient(90deg,
+      var(--start-gradient) 0%,
+      var(--end-gradient) 100%);
+  width: 100%;
+}
+
+.contenedor-footer{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.caja-rayas td {
+  display: flex;
+  padding: 10px 100px;
+  border: 1px solid gray;
+  justify-content: center;
+}
+
+.caja-rayas td:nth-child(odd) {
+  background-color: var(--odd-row);
+}
+
+.caja-rayas td:nth-child(even) {
+  background-color: var(--even-row);
+}
+
+.tarjeta {
+  display: flex;
+  text-align: center;
+  background-color:black;
+  border-radius: 15px;
+  margin-top: 10px;
+  max-width: 800px;
+  padding: 10px;
+  width: 100%;  
+}
+
+.imagen-tarjeta {
+  padding: 20px;
+  background-color: #676a70;
+  border-radius: 15px;
+  text-align: center;
+}
+
+.profesion {
+  display: flex;
+  align-items: center;
+  font-weight: var(--bold);
+  align-items: center;
+}
+
+.contacto {
+  display: flex;
+  align-items: center;
+  font-weight: var(--bold);  
+}
+
+table {
+    width: 100%;
+    margin-top: 20px;
+}
+
+th, td {
+    border: 1px solid var(--first-row); 
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+th {
+    background-color: var(--first-row);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
