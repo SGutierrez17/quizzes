@@ -17,7 +17,7 @@ console.log("[Question # 1]: ", activity);
  * Given a variable age = 20, use a ternary operator to determine if the age is greater than 18. If so, set a variable status to "Adult", otherwise set it to "Minor".
  */
 
-let edad = 20;
+const edad = 20;
 const status = edad > 18 ? "Adult" : "Minor";
 
 console.log("[Question # 2]: ", status);
