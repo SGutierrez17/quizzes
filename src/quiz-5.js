@@ -92,7 +92,7 @@ switch (fruit) {
     break;
 }
 
-console.log("[Question #4]: ", isBerry);
+console.log("[Question #4]:  ", isBerry);
 
 /**
  * Question 5
