@@ -77,14 +77,14 @@ for (let o = 0; o < story7.length; o++) {
 console.log(storyString7); // Answer should be:
 
 // Question 8: Create an acronym from the phrase "In The Beginning".
-let phrase8 = "In The Beginning";
+let phrase8 = "in the beginning";
 let acronym8 = "";
 for (let p = 0; p < phrase8.length; p++) {
   if (p === 0) {
-    acronym8 = phrase8[0];
+    acronym8 = phrase8[0].toUpperCase();
   }
   if (phrase8[p] === " ") {
-    acronym8 += phrase8[p + 1];
+    acronym8 += phrase8[p + 1].toUpperCase();
   }
 }
 console.log(acronym8); // Answer should be:
@@ -102,9 +102,7 @@ console.log(upperName9); // Answer should be:
 let name10 = "Revelation";
 let length10 = 0;
 for (let r = 0; name10[r] !== undefined; r++) {
-  if (name10[r] !== undefined) {
-    length10++;
-  }
+  length10++;
 }
 console.log(`The length of the string ${name10} is : ${length10}`); // Answer should be:
 
@@ -192,10 +190,10 @@ let phrase18 = "Garden Of Eden";
 let acronym18 = "";
 for (let z = 0; z < phrase18.length; z++) {
   if (z === 0) {
-    acronym18 += phrase18[0];
+    acronym18 += phrase18[0].toUpperCase();
   }
   if (phrase18[z] === " ") {
-    acronym18 += phrase18[z + 1];
+    acronym18 += phrase18[z + 1].toUpperCase();
   }
 }
 console.log(acronym18); // Answer should be:
