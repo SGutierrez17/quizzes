@@ -212,8 +212,6 @@ console.log(lowerName19); // Answer should be:
 let name20 = "Exodus";
 let length20 = 0;
 for (let bb = 0; name20[bb] !== undefined; bb++) {
-  if (name20[bb] !== undefined) {
-    length20++;
-  }
+  length20 += name20[bb] !== undefined ? 1 : 0;
 }
 console.log(`The length of the string ${name20} is : ${length20}`); // Answer should be:
