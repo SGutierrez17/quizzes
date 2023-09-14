@@ -1,0 +1,13 @@
+{
+  "recommendations": [
+    "dzhavat.bracket-pair-toggler",
+    "dbaeumer.vscode-eslint",
+    "eamodio.gitlens",
+    "ritwickdey.LiveServer",
+    "esbenp.prettier-vscode",
+    "RobbOwen.synthwave-vscode",
+    "vscode-infra.image-viewer",
+    "vscode-icons-team.vscode-icons",
+    "dbaeumer.vscode-eslint"
+  ]
+}
