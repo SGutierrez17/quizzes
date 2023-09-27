@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="index.js">
+    <title>Counter</title>
+</head>
+<body>
+    Counter
+    <h1 id="contador">0</h1>
+    <button class="button1" onclick="incrementarContador()">Incrementar</button1>
+    <button class="button2" onclick="decrementarContador()">Decrementar</button>
+    <script>
+        let contador = 0;
+        function incrementarContador() {
+            contador++;
+            document.getElementById("contador").textContent = contador;
+        }
+        function decrementarContador() {
+            if(contador>0){
+            contador--;
+            document.getElementById("contador").textContent = contador;
+            }
+            // if (contador <=0 ){
+            //   !contador++
+            // }
+        }
+    </script>
+</body>
+</html>
